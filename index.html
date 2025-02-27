@@ -90,5 +90,44 @@
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
     <div class="cat-img" id="p">0</div>
 </div>
+
+<script>
+    // 計數器初始化
+    let count = 0;
+
+    // 用 id 抓取 文字的 HTML 元素
+    let p = document.getElementById('p');
+
+    // 顯示計數器的數字
+    p.innerText = count;
+
+    // 寫一個function 計數器累加
+    function addCount() {
+        // 計數器累加
+        count++;
+        // 更新文字
+        document.getElementById('p').innerText = count;
+    }
+
+    // 註冊滑鼠按下的事件，呼叫計數器累加 fun
+    document.addEventListener('mousedown', addCount);
+
+    // 當滑鼠按下，切換張嘴圖片
+    document.addEventListener('mousedown', function () {
+        p.style.backgroundImage = 'url("imgs/op.png")';
+    });
+
+    // 當滑鼠放開，便恢復原來圖片
+    document.addEventListener('mouseup', function () {
+        p.style.backgroundImage = 'url("imgs/p.png")';
+    });
+
+    // 當滑鼠按下，播放 pops/pop1.mp3
+    document.addEventListener('mousedown', function () {
+        let audio = new Audio('pops/pop1.mp3');
+        audio.play();
+    });
+
+</script>
 </body>
 </html>
