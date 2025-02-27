@@ -46,6 +46,42 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
+
+        /*body box 編距為0*/
+        body {
+            margin: 0;
+        }
+
+        /*文字 div 排版填滿剩餘空間*/
+        #p {
+            flex: 1;
+        }
+
+        /*字型 sans-serif*/
+        body {
+            font-family: sans-serif;
+        }
+
+        /*防止文字被選取*/
+        .cat-img {
+            user-select: none;
+        }
+
+        /*標題 box 最大寬度 600px*/
+        .title {
+            max-width: 600px;
+        }
+
+        /*文字 box 最大寬度 800px*/
+        .cat-img {
+            max-width: 800px;
+        }
+
+        /*新贈文字 div 背景圖片 用 id 設定 imgs/op.png*/
+        #p {
+            background-image: url('imgs/op.png');
+        }
+
     </style>
 </head>
 <body>
